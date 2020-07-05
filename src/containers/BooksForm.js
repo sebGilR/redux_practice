@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { createBook, removeBook } from '../actions'
 
 const categories = [
   "Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"
@@ -48,4 +50,10 @@ const BooksForm = () => {
   )
 }
 
-export default BooksForm;
+const mapDispatchToProps = dispatch => ({
+  handleSubmit: book => {
+    dispatch(createBook(book))
+  }
+});
+
+export default connect(mapDispatchToProps)(BooksForm);
