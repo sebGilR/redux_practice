@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { createBook } from '../actions'
+import { createBook } from '../actions';
 
 const categories = [
   "Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"
@@ -12,7 +12,6 @@ const BooksForm = (props) => {
 
   const handleChange = (e) => {
     switch (e.target.type) {
-
       case 'select-one':
         setCategory(e.target.value);
         break;

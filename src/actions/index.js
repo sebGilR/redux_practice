@@ -10,9 +10,10 @@ export const createBook = (book) => {
   }
 }
 
-export const removeBook = (id) => {
+export const removeBook = (book) => {
   return {
     type: 'REMOVE_BOOK',
-    id
+    book,
+    id: book.bookID
   }
 }
