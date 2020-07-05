@@ -17,6 +17,7 @@ const BooksList = (props) => {
         {
           props.books.map(book =>
             <tr key={book.bookID}>
+              {console.log(book)}
               <Book  {...book} />
             </tr>
           )

@@ -3,9 +3,9 @@ let idGen = 3;
 export const createBook = (book) => {
   return {
     type: 'CREATE_BOOK',
-    payload: {
+    book: {
       ...book,
-      id: ++idGen
+      bookID: ++idGen
     }
   }
 }
